@@ -1,11 +1,12 @@
-nums = int(input())
-listnums = []
-for i in range(nums):
-    listnums.append(int(input()))
-for i in range(nums):
-    if listnums[i] % 5 == 0:
-        listnums[i] = listnums[i] // 5 * 2
-    elif listnums[i] % 2 == 0:
-        listnums[i] = listnums[i] // 5 * 2
-    print(listnums[i], end = ' ')
+def solution(n: int, nums: []):
+    for i in range(len(nums)):
+        if nums[i] % 5 == 0:
+            nums[i] = nums[i] // 5 * 2
+        elif nums[i] % 2 == 0:
+            nums[i] = nums[i] // 2 * 5
+        print(nums[i], end = ' ')
+
+if __name__ == '__main__':
+    solution(3, [10, 2, 6, 20, 4, 5])
+
 
